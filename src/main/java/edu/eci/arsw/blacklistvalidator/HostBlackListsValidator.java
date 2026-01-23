@@ -51,10 +51,19 @@ public class HostBlackListsValidator {
             threads[i] = new BlackListThread(skds, init, fin, ipaddress);
             init += 1;
             fin += threadCount;
+            threads[i].start();
         }
 
         for (int i = 0;i <= N; i++){
-            threads[i].start();
+            try{
+                threads[i].join();
+            } catch(InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+
+        for (int i = 0;i <= N; i++){
+            ocurrencesCount += threads[i].getBlacklistServerCount();
         }
         
         if (ocurrencesCount>=BLACK_LIST_ALARM_COUNT){
