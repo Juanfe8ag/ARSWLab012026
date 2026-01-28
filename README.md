@@ -14,4 +14,31 @@ que la salida por consola sea secuencial al llamado de estos.
 
 ### Parte II: Ejercicio Black List Search
 En este ejercicio se pide una refactorización, agregando una constante como parámetro para dividir el problema en N hilos. 
-Para ello se creó una clase llamada BlackListThread que define la busqueda segmentada en las listas negras
+Para ello se creó una clase llamada BlackListThread que define la búsqueda segmentada en las listas negras y en el
+validator se crea todo el flujo para saber si está en la lista negra o no.
+
+### Parte III - Evaluación de Desempeño
+Para la parte de rendimiento se tomaron mediciones para distintas cantidades de hilos. Los siguietes fueron los resultados:
+
+![OneThread.png](img/OneThread.png)
+
+Para un hilo, el proceso se demoró 3 minutos 35 segundos
+
+![ProcessorsThreads.png](img/ProcessorsThreads.png)
+
+Para la cantidad de procesadores, es decir, 16 hilos se demoró 30 segundos
+
+![DoubleProcessorsThreads.png](img/DoubleProcessorsThreads.png)
+
+Para la cantidad del doble de procesadores, es decir, 32 se demoró 12 segundos
+
+![FiftyThreads.png](img/FiftyThreads.png)
+
+Para 50 hilos se demoró 2 segundos
+
+Y para 100 hilos se demora menos de un segundo.
+
+# Parte IV - Ejercicio Black List Search
+Para la fórmula, aunque la lógica diría que entre más hilos allá, más eficiente es, no es realmente cierto, ya que, si bien ayuda,
+no lo es todo, pueden llegar sobrecargas, costos de sincronización, latencia, etc. Al final, lo que hay que pensar
+realmente es lo más óptimo para el problema a solucionar.
