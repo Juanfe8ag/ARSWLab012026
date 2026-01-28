@@ -16,9 +16,9 @@ public class CountThreadsMain {
         Thread secondThread = new CountThread(99, 199);
         Thread thirdThread = new CountThread(200,299);
 
-        firstThread.run();
-        secondThread.run();
-        thirdThread.run();
+        firstThread.start();
+        secondThread.start();
+        thirdThread.start();
     }
     
 }
