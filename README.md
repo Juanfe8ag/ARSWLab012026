@@ -17,8 +17,13 @@ En este ejercicio se pide una refactorización, agregando una constante como par
 Para ello se creó una clase llamada BlackListThread que define la búsqueda segmentada en las listas negras y en el
 validator se crea todo el flujo para saber si está en la lista negra o no.
 
+## Parte II.I: Estrategia paralelismo
+Una estrategia para optimizar el proceso podría ser la adición de una variable que se actualiza en tiempo real que compartan
+todos los hilos y que, cuando lleguen al límite, paren al mismo tiempo. El problema sería que esa variable entraría a ser una
+zona crítica y debería ser mutex para que esta solución no tuviera ninguna consecuencia aparente. 
+
 ## Parte III - Evaluación de Desempeño
-Para la parte de rendimiento se tomaron mediciones para distintas cantidades de hilos. Los siguietes fueron los resultados:
+Para la parte de rendimiento se tomaron mediciones para distintas cantidades de hilos. Los siguientes fueron los resultados:
 
 ![OneThread.png](img/OneThread.png)
 
