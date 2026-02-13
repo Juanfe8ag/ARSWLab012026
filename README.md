@@ -2,6 +2,8 @@
 
 ## Autor: Juan Felipe Ochoa
 
+ESTE REPOSITORIO FUE ALTERADO DEBIDO AL REQUERIMIENTO DE LA PARTE 2 DEL LABORATORIO 3.
+
 ## Parte I: Introducción a Hilos en Java
 Para esta parte se definen 2 clases: CountThread y CountThreadMain. En la primera se definirá el ciclo de vida del hilo
 que contara números entre determinados números A y B, por otro lado, la segunda clase será donde se definen los rangos 
